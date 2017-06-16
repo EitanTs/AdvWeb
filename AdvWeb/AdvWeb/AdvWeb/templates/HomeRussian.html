@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>Lawyers Site</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Style/semantic/semantic.min.css') }}" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='Style/semantic/semantic.min.js') }}"></script>
+    <link href="{{ url_for('static', filename='Style/style_ru.css') }}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Varela+Round" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main_div">
+      <div id="header">
+        <div id="logo">
+          <img class="ui image" src="{{ url_for('static', filename='Images/logo2.png') }}" />
+        </div>
+        <div id="contact">
+          <div class="ui red label">
+            <i class="call icon"></i> 0523586954
+          </div>
+          <div class="ui red label">
+              <i class="mail icon"></i> innaadv@gmail.com
+          </div>
+        </div>
+      </div>
+
+      <div id="menu1">
+      <div class="ui right aligned secondary pointing menu">
+        <a class="active item">
+         Home
+        </a>
+        <a class="item">
+        Nadlan
+        </a>
+        <a class="item">
+         Devorces
+        </a>
+        <a class="item">
+         Ezrahut
+        </a>
+        <a class="item">
+          Odot
+        </a>
+        <div class="right menu">
+          <a class="ui item" href="/home?key=home">
+            <div data-tooltip="עברית" data-position="right center" data-inverted=""><i class="israel flag"></i></div>
+          </a>
+          <a class="ui item" href="/home?lang=1?key=home">
+            <div data-tooltip="Russian" data-position="left center" data-inverted=""><i class="russia flag"></i></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+      <div id="main_body">
+
+        <div class="ui cards">
+        <div class="ui raised card">
+        <div class="image">
+          <img src="{{ url_for('static', filename='Images/ina.png') }}">
+        </div>
+        <div class="content">
+          <a class="header">{{ description_title }}</a>
+          <div class="meta">
+            <span class="date">{{ description_sub_title }}</span>
+          </div>
+          <div class="description">
+           {{ descript_content }}
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="Marker icon"></i>
+          Tel Aviv, Israel
+          </a>
+        </div>
+      </div>
+
+      <div class="ui raised card">
+        <div class="content">
+          <div class="header">{{ main_title }}</div>
+          <div class="meta">
+            <span class="category">{{ date }}</span>
+          </div>
+          <div class="description">
+            <p>
+              {% for line in main_content %}
+                  {{ line }}
+                  <br />
+              {% endfor %}
+            </p>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="left floated author">
+            <img class="ui avatar image" src="{{ url_for('static', filename='Images/ina.png') }}"> {{ name }}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="ui raised card" style="padding:15px;">
+      <img style="margin:auto;" class="ui rounded image" src="{{ url_for('static', filename='Images/hammer1.jpg') }}">
+      <img style="margin:auto;" class="ui rounded image" src="{{ url_for('static', filename='Images/justice6.jpg') }}">
+  </div>
+    </div>
+
+
+    </div>
+
+
+
+    <div class="rtl" id="bottom_body">
+          <div class="body_container">
+          <div class="ui message">
+            <div class="header">
+              {{ bottom_title }}
+            </div>
+            <br />
+            <p>
+              {% for detail in details %}
+                  {{ detail }}
+                  <br />
+                  <br />
+              {% endfor %}
+            </p>
+          </div>
+          </div>
+    </div>
+
+
+        <div class="ui horizontal divider">
+              Inna Tsiperson 1998  <i class="legal icon"></i>
+          </div>
+
+
+</div>
+
+
+
+  </div>
+  </body>
+</html>

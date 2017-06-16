@@ -1,0 +1,47 @@
+
+body {
+/*background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), blue  /*url('justice5.jpg') center / cover */;
+background: url("../Images/wallet_bg.png");
+font-family: 'Varela Round', sans-serif;
+/*font-family: 'Rubik', sans-serif;*/
+/*background-color: F6F6F6;*/
+}
+#main_div {
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#header {
+display: block;
+margin-top: 10px;
+}
+
+#menu1 {
+margin-top: 20px;
+direction: ltr;
+display: block;
+font-family: 'Varela Round', sans-serif;
+}
+
+#main_body {
+display: block;
+direction: ltr;
+margin-top:10px;
+}
+#logo
+{
+  float:right;
+}
+#contact {
+  padding-top: 10px;
+}
+#bottom_body {
+  margin-top: 15px;
+}
+#images {
+  float: left;
+}
+.rtl {
+  direction: ltr;
+}
